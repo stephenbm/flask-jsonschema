@@ -33,6 +33,7 @@ class _JsonSchema(object):
 class ValidationError(Exception):
     def __init__(self, message,  schema_errors, *args, **kwargs):
         super(ValidationError, self).__init__(message, *args, **kwargs)
+        self.message = message
         self.schema_errors = schema_errors
 
 
